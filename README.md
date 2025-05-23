@@ -57,6 +57,7 @@ open up localhost:
 - Flask
 - GPT
 - Pinecone
+- Github
 
 
 # AWS-CICD-Deployment-with-Github-Actions
