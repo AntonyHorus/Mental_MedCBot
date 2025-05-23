@@ -1,11 +1,11 @@
+# Stable requirements.txt for Python 3.10 + Pinecone 5.0.1
 sentence-transformers==2.2.2
-langchain
-flask
-pypdf
-python-dotenv
-pinecone[grpc]
-langchain-pinecone
-langchain_community
-langchain_openai
-langchain_experimental
+langchain==0.0.346  # Last version fully compatible with Pinecone 5.x
+flask==2.3.2  # LTS version for Python 3.10
+pypdf==3.17.0
+python-dotenv==1.0.0
+pinecone-client==5.0.1  # Your existing version (no upgrades)
+langchain-pinecone==0.0.5  # Compatible with Pinecone 5.0.1
+langchain-community==0.0.14  # Older stable version
+# langchain-openai==0.0.8  # Only include if using OpenAI
 -e .
