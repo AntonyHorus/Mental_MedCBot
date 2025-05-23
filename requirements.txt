@@ -1,11 +1,16 @@
 # Stable requirements.txt for Python 3.10 + Pinecone 5.0.1
 sentence-transformers==2.2.2
-langchain==0.0.346  # Last version fully compatible with Pinecone 5.x
-flask==2.3.2  # LTS version for Python 3.10
+flask==2.3.2
 pypdf==3.17.0
 python-dotenv==1.0.0
-pinecone-client==5.0.1  # Your existing version (no upgrades)
-langchain-pinecone==0.0.5  # Compatible with Pinecone 5.0.1
-langchain-community==0.0.14  # Older stable version
-# langchain-openai==0.0.8  # Only include if using OpenAI
+pinecone-client[grpc]==5.0.1
+
+# LangChain (modern features + Pinecone 5.x compatibility)
+langchain==0.1.0,<0.2.0                # Replaces 0.0.346 (must upgrade)
+langchain-core>=0.1.0,<0.2.0           # Required for ChatPromptTemplate
+langchain-pinecone==0.0.5              # Works with Pinecone 5.0.1
+langchain-community==0.0.28            # Updated for 0.1.x compatibility
+langchain-openai>=0.0.5,<0.1.0         # Keeps OpenAI class
+
+# Editable install (if needed)
 -e .
